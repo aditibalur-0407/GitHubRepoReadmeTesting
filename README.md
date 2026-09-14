@@ -34,6 +34,7 @@ The most common method: the image file is committed into the repository (e.g., u
 Instead of a relative path, the raw file URL is used directly.
 
 **GitHub:**
+![Logo](https://raw.githubusercontent.com/aditibalur-0407/GitHubRepoReadmeTesting/refs/heads/main/images/logo.png)
 ```markdown
 ![Logo](https://raw.githubusercontent.com/<org>/<repo>/main/images/logo.png)
 ```
