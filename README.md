@@ -8,7 +8,8 @@ Each section below uses a distinct image-embedding technique. Use this matrix to
 
 ## 1. Drag-and-drop upload (GitHub issue/PR/README editor)
 
-When you drag an image directly into the GitHub web editor (README, issue, or PR comment box), GitHub uploads it to its user-content CDN and auto-inserts markdown pointing to a generated URL, e.g.:
+When you drag an image directly into the GitHub web editor (README, issue, or PR comment box), GitHub uploads it to its user-content CDN and auto-inserts markdown pointing to a generated URL, e.g.: <img width="800" height="450" alt="architecture-diagram" src="https://github.com/user-attachments/assets/09cfbe4f-e481-4540-a6a5-2063fef7b4de" />
+
 
 ```markdown
 ![Dropped screenshot](https://github.com/user-attachments/assets/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
@@ -20,7 +21,7 @@ When you drag an image directly into the GitHub web editor (README, issue, or PR
 ## 2. Relative path to a committed image file
 
 The most common method: the image file is committed into the repository (e.g., under `/images` or `/docs/assets`) and referenced with a relative path.
-
+![Architecture diagram](./images/dashboard-preview.png)
 ```markdown
 ![Architecture diagram](./images/architecture-diagram.png)
 ```
