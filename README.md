@@ -62,7 +62,9 @@ Markdown alone can't control image width/height, so authors often drop to raw HT
 ## 5. Badges / dynamically generated images (shields.io)
 
 Build-status and version badges are technically remote images pulled from a third-party service at render time:
-
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)
+![Coverage](https://img.shields.io/badge/coverage-95%25-orange)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Foctocat%2FHello-World&query=%24.stargazers_count&style=flat&label=stars)
 ```markdown
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
@@ -92,27 +94,11 @@ Bitbucket README/wiki pages sometimes reference attachments uploaded through the
 
 Neither GitHub nor Bitbucket Markdown natively embeds `<video>` in READMEs the way HTML pages do; the common workaround is a linked thumbnail:
 
+[![Watch the demo](./images/video-thumbnail.png)](https://www.youtube.com/watch?v=nVNIoQUcFI4)
 ```markdown
 [![Watch the demo](./images/video-thumbnail.png)](https://youtu.be/xxxxxxxxxxx)
 ```
 
 - **Test note:** This is a *fallback* case for the user story — confirms the admin link-editing / fallback requirement when true video embedding isn't supported and a clickable thumbnail is substituted instead.
 
----
 
-## Suggested Test Matrix
-
-| # | Method | Source Platform | Expected in Code Exchange |
-|---|--------|-----------------|----------------------------|
-| 1 | Drag-and-drop CDN link | GitHub | Renders (external CDN allowed) |
-| 2 | Relative path, committed file | GitHub / Bitbucket | Path must resolve against raw root |
-| 3 | Absolute raw URL | GitHub / Bitbucket | Renders (positive control) |
-| 4 | HTML `<img>` tag | Either | Depends on sanitizer config |
-| 5 | Shields.io badge | Either | Tests third-party domain allowlist |
-| 6 | Bitbucket downloads/attachment | Bitbucket | Tests attachment-storage fetch |
-| 7 | GIF | Either | Tests animated format support |
-| 8 | Video thumbnail fallback | Either | Tests admin fallback/link-edit flow |
-
----
-
-*Generated as a test fixture — not application documentation.*
