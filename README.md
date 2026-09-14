@@ -51,6 +51,8 @@ Instead of a relative path, the raw file URL is used directly.
 
 Markdown alone can't control image width/height, so authors often drop to raw HTML:
 
+<img src="./images/feature-demo.gif" alt="Feature Demo" width="600" /> 
+
 ```html
 <img src="./images/dashboard-preview.png" alt="Dashboard preview" width="600" />
 ```
